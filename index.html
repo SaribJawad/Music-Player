@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body class="bg-zinc-800 flex justify-center items-center min-h-screen">
+
+    <section class="bg-white text-[#181028] p-8 shadow-lg  max-w-md w-full">
+        <header class="text-center">
+            <p>PLAYING NOW</p>
+            <h1 id="title" class="font-bold text-lg">---</h1>
+            <small id="artist">---</small>
+        </header>
+
+        <img id="thumbnail" class="w-60 aspect-square object-cover mx-auto my-6 shadow-lg" alt="">
+
+
+        <div>
+            <progress class="w-full" id="progress" value="0" max="100"></progress>
+
+            <div class="flex justify-between">
+                <small id="current-time">0:00</small>
+                <small id="total-time">0:00</small>
+            </div>
+
+            <div class="text-[#27272a] flex justify-center gap-2 p-4">
+                <button id="repeat-btn" class="hover:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-repeat" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 12v-3a3 3 0 0 1 3 -3h13m-3 -3l3 3l-3 3" />
+                        <path d="M20 12v3a3 3 0 0 1 -3 3h-13m3 3l-3 -3l3 -3" />
+                    </svg></button>
+                <button id="prev-btn" class="hover:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-chevron-left" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M15 6l-6 6l6 6" />
+                    </svg></button>
+                <button id="toggle-btn" class="flex items-center justify-center w-12 h-12 hover:text-gray-400 group">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="group-[.play]:hidden" width="30" height="30"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z"
+                            stroke-width="0" fill="currentColor" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="hidden group-[.play]:block" width="30" height="30"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M9 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z"
+                            stroke-width="0" fill="currentColor" />
+                        <path d="M17 4h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2z"
+                            stroke-width="0" fill="currentColor" />
+                    </svg>
+                </button>
+
+                <button id="next-btn" class="hover:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-chevron-right" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M9 6l6 6l-6 6" />
+                    </svg></button>
+                <button id="shuffle-btn" class="hover:text-gray-400"><svg xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-arrows-shuffle" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M18 4l3 3l-3 3" />
+                        <path d="M18 20l3 -3l-3 -3" />
+                        <path d="M3 7h3a5 5 0 0 1 5 5a5 5 0 0 0 5 5h5" />
+                        <path d="M21 7h-5a4.978 4.978 0 0 0 -3 1m-4 8a4.984 4.984 0 0 1 -3 1h-3" />
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+
+        <div id="playlist" class="space-y-2 ">
+
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
